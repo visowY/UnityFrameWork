@@ -17,25 +17,19 @@ public class OverrideCreateUI
 
     private static GameObject CreateGButton()
     {
-        // var config = ScriptableManager.GetDefaultConfig();
         System.Action<GameObject> callback = (go) =>
         {
             GButton btn = go.GetComponent<GButton>();
-            
         };
-        return CreateGo<GButton>("btn_", callback);
+        return CreateGo<GButton>(callback);
     }
 
 
-
-    private static GameObject CreateGo<T>(string defaulName, System.Action<GameObject> callback)
+    private static GameObject CreateGo<T>( System.Action<GameObject> callback)
     {
-        GameObject go  = new GameObject(defaulName, typeof(T));
-        callback(go);
-        go.transform.SetParent(Selection.activeTransform);
-        go.transform.localPosition = Vector3.zero;
-        go.transform.localScale = Vector3.one;
-        Selection.activeGameObject = go;
+        var config = EditorScriptableManager.GetDefaultConfig();
+        var obj = config._defaultGButton;
+        GameObject go = GameObject.Instantiate(obj, Selection.activeTransform);
         return go;
     }
 
