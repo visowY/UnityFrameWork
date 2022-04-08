@@ -53,6 +53,7 @@
      <Compile Include="Assets\FrameWork\Editor\Tools\EditorScriptableManager.cs" />
      <Compile Include="Assets\FrameWork\Editor\Tools\OverrideCreateUI.cs" />
      <Compile Include="Assets\FrameWork\Editor\Tools\ProjectDefaultConfig.cs" />
+     <Compile Include="Assets\FrameWork\Editor\Tools\TextureImportSetting.cs" />
      <Compile Include="Assets\FrameWork\Editor\UIComponents\GButtonEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/Users/yue.wang/UnityRs/CommonRs/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
